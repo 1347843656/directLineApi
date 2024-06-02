@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @author : xiaojiajun
  * @date : 2024-06-01 15:53
@@ -21,7 +23,8 @@ public class BaseApiController {
 
     @ApiOperation(value = "启动会话")
     @PostMapping("/StartSession")
-    public Object StartSession(){
+    public Object StartSession(HttpServletRequest request){
+        String header = request.getHeader("Authorization");
         return "启动了";
     }
 
