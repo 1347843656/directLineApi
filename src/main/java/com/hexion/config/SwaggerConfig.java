@@ -24,7 +24,7 @@ public class SwaggerConfig {
                 //通过.select()方法，去配置扫描接口
                 .select()
                 //RequestHandlerSelectors配置如何扫描接口
-                .apis(RequestHandlerSelectors.basePackage("com.hexion.dircetLineApi"))
+                .apis(RequestHandlerSelectors.basePackage("com.hexion"))
                 // 配置如何通过path过滤,即这里只扫描请求以/koko开头的接口
 //                .paths(PathSelectors.ant("/koko/**"))
                 .build();

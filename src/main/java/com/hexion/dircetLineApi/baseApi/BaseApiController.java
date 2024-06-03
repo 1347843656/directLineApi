@@ -14,16 +14,16 @@ import javax.servlet.http.HttpServletRequest;
  * @date : 2024-06-01 15:53
  * @Description: 基础接口
  */
-@Api(tags = "基础接口")
+@Api(tags = "测试")
 @Slf4j
 @RestController
 @RequestMapping("/api/base")
 public class BaseApiController {
 
-
-    @ApiOperation(value = "启动会话")
+    @ApiOperation(value = "测试")
     @PostMapping("/StartSession")
     public Object StartSession(HttpServletRequest request){
+//        conversationsApi.conversationsStartConversationCall();
         String header = request.getHeader("Authorization");
         return "启动了";
     }
